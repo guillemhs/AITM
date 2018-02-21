@@ -72,6 +72,9 @@ apt-get -y install git curl vim screen ssh tree lynx links links2 unzip
 # packages: python
 apt-get -y install python-pip python-dev build-essential python-virtualenv
 
+# pip upgrade
+pip install --upgrade pip
+
 # packages: ansible
 apt-get -y install software-properties-common
 apt-get -y install ansible
