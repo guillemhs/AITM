@@ -6,10 +6,11 @@ Vagrant.configure("2") do |config|
     vb.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
   end
   config.vm.boot_timeout = 60
+  config.vbguest.auto_update = false
 
   config.vm.define "base" do |base|
     base.ssh.username = "vagrant"
-    base.vm.host_name = "base"
+    base.vm.host_name = "base.bruguera.com"
     base.vm.box = "ubuntu/xenial64"
     base.vm.box_version = "20180224.0.0"
     base.vm.provision :shell, :path => "vagrant-bootstrap-base.sh"
@@ -20,7 +21,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "zipi" do |zipi|
     zipi.ssh.username = "vagrant"
-    zipi.vm.host_name = "zipi"
+    zipi.vm.host_name = "zipi.bruguera.com"
     zipi.vm.box = "base"
     zipi.vm.provision :shell, :path => "vagrant-bootstrap-zipi.sh"
     zipi.vm.network "private_network", ip: "192.168.56.11", virtualbox__intnet: true, auto_config: true
@@ -30,7 +31,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "zape" do |zape|
     zape.ssh.username = "vagrant"
-    zape.vm.host_name = "zape"
+    zape.vm.host_name = "zape.bruguera.com"
     zape.vm.box = "base"
     zape.vm.provision :shell, :path => "vagrant-bootstrap-zape.sh"
     zape.vm.network "private_network", ip: "192.168.56.12", virtualbox__intnet: true, auto_config: true
@@ -39,10 +40,18 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "pantuflo" do |pantuflo|
-    pantuflo.ssh.username = "vagrant"
-    pantuflo.vm.host_name = "pantuflo"
-    pantuflo.vm.box = "base"
-    pantuflo.vm.provision :shell, :path => "vagrant-bootstrap-pantuflo.sh"
-    pantuflo.vm.network "private_network", ip: "192.168.56.13", virtualbox__intnet: true, auto_config: true
+    pantuflo.vm.box = "ubuntu/xenial64"
+    pantuflo.vm.box_version = "20180224.0.0"
+    pantuflo.vm.hostname = 'pantuflo.bruguera.com'
+    pantuflo.vm.network :private_network, ip: '192.168.56.13'
+    pantuflo.vbguest.auto_update = false
+    pantuflo.vm.provider :virtualbox do |vb|
+      vb.linked_clone = true
+      vb.memory = 2048
+      vb.cpus = 2
+      vb.customize ['modifyvm', :id, '--cableconnected1', 'on']
+    end
+
+    pantuflo.vm.provision :shell, path: 'vagrant-bootstrap-pantuflo.sh'
   end
 end

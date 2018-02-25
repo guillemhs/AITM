@@ -1,7 +1,11 @@
 #!/bin/bash
-
+rm /var/lib/dpkg/lock
+rm /var/lib/apt/lists/lock
+rm /var/cache/apt/archives/lock
 apt-get update
+dpkg --configure -a
 apt-get -y upgrade
+dpkg --configure -a
 
 apt-get install -y --no-install-recommends \
         apt-transport-https \
