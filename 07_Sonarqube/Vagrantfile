@@ -1,0 +1,48 @@
+Vagrant.configure("2") do |config|
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = 512
+    vb.cpus = 1
+    vb.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
+  end
+  config.vm.boot_timeout = 60
+
+  config.vm.define "base" do |base|
+    base.ssh.username = "vagrant"
+    base.vm.host_name = "base"
+    base.vm.box = "ubuntu/xenial64"
+    base.vm.box_version = "20180224.0.0"
+    base.vm.provision :shell, :path => "vagrant-bootstrap-base.sh"
+    base.vm.network "private_network", ip: "192.168.56.10", virtualbox__intnet: true, auto_config: true
+    base.vm.network "forwarded_port", guest: 80, host: 8084, host_ip: "127.0.0.1", auto_correct: true
+    base.vm.network "forwarded_port", guest: 8080, host: 8085, host_ip: "127.0.0.1", auto_correct: true
+  end
+
+  config.vm.define "zipi" do |zipi|
+    zipi.ssh.username = "vagrant"
+    zipi.vm.host_name = "zipi"
+    zipi.vm.box = "base"
+    zipi.vm.provision :shell, :path => "vagrant-bootstrap-zipi.sh"
+    zipi.vm.network "private_network", ip: "192.168.56.11", virtualbox__intnet: true, auto_config: true
+    zipi.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1", auto_correct: true
+    zipi.vm.network "forwarded_port", guest: 8080, host: 8081, host_ip: "127.0.0.1", auto_correct: true
+  end
+
+  config.vm.define "zape" do |zape|
+    zape.ssh.username = "vagrant"
+    zape.vm.host_name = "zape"
+    zape.vm.box = "base"
+    zape.vm.provision :shell, :path => "vagrant-bootstrap-zape.sh"
+    zape.vm.network "private_network", ip: "192.168.56.12", virtualbox__intnet: true, auto_config: true
+    zape.vm.network "forwarded_port", guest: 80, host: 8082, host_ip: "127.0.0.1", auto_correct: true
+    zape.vm.network "forwarded_port", guest: 8080, host: 8083, host_ip: "127.0.0.1", auto_correct: true
+  end
+
+  config.vm.define "pantuflo" do |pantuflo|
+    pantuflo.ssh.username = "vagrant"
+    pantuflo.vm.host_name = "pantuflo"
+    pantuflo.vm.box = "base"
+    pantuflo.vm.provision :shell, :path => "vagrant-bootstrap-pantuflo.sh"
+    pantuflo.vm.network "private_network", ip: "192.168.56.13", virtualbox__intnet: true, auto_config: true
+  end
+end
