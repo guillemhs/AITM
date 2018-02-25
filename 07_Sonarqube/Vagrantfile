@@ -10,39 +10,38 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "base" do |base|
     base.ssh.username = "vagrant"
-    base.vm.host_name = "base.bruguera.com"
+    base.vm.host_name = "base.local"
     base.vm.box = "ubuntu/xenial64"
     base.vm.box_version = "20180224.0.0"
     base.vm.provision :shell, :path => "vagrant-bootstrap-base.sh"
-    base.vm.network "private_network", ip: "192.168.56.10", virtualbox__intnet: true, auto_config: true
-    base.vm.network "forwarded_port", guest: 80, host: 8084, host_ip: "127.0.0.1", auto_correct: true
-    base.vm.network "forwarded_port", guest: 8080, host: 8085, host_ip: "127.0.0.1", auto_correct: true
+    base.vm.network "private_network", ip: "192.168.56.10"
+    base.vm.network "forwarded_port", guest: 80, host: 8084, host_ip: "192.168.56.10", auto_correct: true
+    base.vm.network "forwarded_port", guest: 8080, host: 8085, host_ip: "192.168.56.10", auto_correct: true
   end
 
   config.vm.define "zipi" do |zipi|
     zipi.ssh.username = "vagrant"
-    zipi.vm.host_name = "zipi.bruguera.com"
+    zipi.vm.host_name = "zipi.local"
     zipi.vm.box = "base"
     zipi.vm.provision :shell, :path => "vagrant-bootstrap-zipi.sh"
-    zipi.vm.network "private_network", ip: "192.168.56.11", virtualbox__intnet: true, auto_config: true
-    zipi.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1", auto_correct: true
-    zipi.vm.network "forwarded_port", guest: 8080, host: 8081, host_ip: "127.0.0.1", auto_correct: true
+    zipi.vm.network "private_network", ip: "192.168.56.11"
+    zipi.vm.network "forwarded_port", guest: 8080, host: 80, host_ip: "192.168.56.11", auto_correct: true
   end
 
   config.vm.define "zape" do |zape|
     zape.ssh.username = "vagrant"
-    zape.vm.host_name = "zape.bruguera.com"
+    zape.vm.host_name = "zape.local"
     zape.vm.box = "base"
     zape.vm.provision :shell, :path => "vagrant-bootstrap-zape.sh"
-    zape.vm.network "private_network", ip: "192.168.56.12", virtualbox__intnet: true, auto_config: true
-    zape.vm.network "forwarded_port", guest: 80, host: 8082, host_ip: "127.0.0.1", auto_correct: true
-    zape.vm.network "forwarded_port", guest: 8080, host: 8083, host_ip: "127.0.0.1", auto_correct: true
+    zape.vm.network "private_network", ip: "192.168.56.12"
+    zape.vm.network "forwarded_port", guest: 80, host: 8082, host_ip: "192.168.56.12", auto_correct: true
+    zape.vm.network "forwarded_port", guest: 8080, host: 8083, host_ip: "192.168.56.12", auto_correct: true
   end
 
   config.vm.define "pantuflo" do |pantuflo|
     pantuflo.vm.box = "ubuntu/xenial64"
     pantuflo.vm.box_version = "20180224.0.0"
-    pantuflo.vm.hostname = 'pantuflo.bruguera.com'
+    pantuflo.vm.hostname = 'pantuflo.local'
     pantuflo.vm.network :private_network, ip: '192.168.56.13'
     pantuflo.vbguest.auto_update = false
     pantuflo.vm.provider :virtualbox do |vb|
