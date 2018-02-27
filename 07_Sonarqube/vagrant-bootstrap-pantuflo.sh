@@ -1,5 +1,36 @@
 #!/bin/bash
+set -eux
+
+config_fqdn=$(hostname --fqdn)
+
+
+#
+# configure apt.
+
+echo 'Defaults env_keep += "DEBIAN_FRONTEND"' >/etc/sudoers.d/env_keep_apt
+chmod 440 /etc/sudoers.d/env_keep_apt
+export DEBIAN_FRONTEND=noninteractive
+
+apt-get update
+
+rm /var/lib/dpkg/lock
+#
+# disable IPv6.
+
+cat>/etc/sysctl.d/98-disable-ipv6.conf<<'EOF'
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+EOF
+systemctl restart procps
+sed -i -E 's,(GRUB_CMDLINE_LINUX=.+)",\1 ipv6.disable=1",' /etc/default/grub
+update-grub2
+
+
+
+#
 # provision vim.
+
 apt-get install -y --no-install-recommends vim
 
 cat>~/.vimrc<<'EOF'
