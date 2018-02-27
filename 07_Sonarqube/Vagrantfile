@@ -39,9 +39,9 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "pantuflo" do |pantuflo|
-    pantuflo.vm.box = "ubuntu/xenial64"
-    pantuflo.vm.box_version = "20180224.0.0"
-    pantuflo.vm.hostname = 'pantuflo.local'
+    pantuflo.ssh.username = "vagrant"
+    pantuflo.vm.host_name = "pantuflo.local"
+    pantuflo.vm.box = "base"
     pantuflo.vm.network :private_network, ip: '192.168.56.13'
     pantuflo.vbguest.auto_update = false
     pantuflo.vm.provider :virtualbox do |vb|
