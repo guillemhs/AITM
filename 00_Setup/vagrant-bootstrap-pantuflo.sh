@@ -152,8 +152,7 @@ server {
     }
 }
 EOF
-rm -rf /etc/nginx/sites-enabled/
-mkdir /etc/nginx/sites-enabled/
+rm /etc/nginx/sites-enabled/default
 ln -s ../sites-available/sonarqube /etc/nginx/sites-enabled/sonarqube
 systemctl restart nginx
 

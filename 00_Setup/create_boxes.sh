@@ -25,6 +25,11 @@ vagrant up zape --provision
 vagrant halt
 vagrant package --output ../../ubuntu-xenial-64-zape.box zape
 
+## pantuflo box: sonarqube server
+vagrant up pantuflo --provision
+vagrant halt
+vagrant package --output ../../ubuntu-xenial-64-pantuflo.box zape
+
 echo "Your boxes ready at: "
 cd ../../
 pwd

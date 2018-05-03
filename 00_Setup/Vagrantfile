@@ -40,4 +40,19 @@ Vagrant.configure("2") do |config|
     zape.vm.network "forwarded_port", guest: 80, host: 8082, host_ip: "127.0.0.1", auto_correct: true
     zape.vm.network "forwarded_port", guest: 8080, host: 8083, host_ip: "127.0.0.1", auto_correct: true
   end
+
+    config.vm.define "pantuflo" do |pantuflo|
+      pantuflo.ssh.username = "vagrant"
+      pantuflo.vm.host_name = "pantuflo.local"
+      pantuflo.vm.box = "base"
+      pantuflo.vm.network :private_network, ip: '192.168.56.13'
+      pantuflo.vm.network "forwarded_port", guest: 9000, host: 9000, host_ip: "192.168.56.13", auto_correct: true
+      pantuflo.vm.provider :virtualbox do |vb|
+        vb.linked_clone = true
+        vb.memory = 2048
+        vb.cpus = 2
+        vb.customize ['modifyvm', :id, '--cableconnected1', 'on']
+      end
+      pantuflo.vm.provision :shell, path: 'vagrant-bootstrap-pantuflo.sh'
+    end
 end
