@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "zipi" do |zipi|
     zipi.ssh.username = "vagrant"
     zipi.vm.host_name = "zipi.local"
-    zipi.vm.box = "base"
+    zipi.vm.box = "ubuntu/xenial64"
     zipi.vm.provision :shell, :path => "vagrant-bootstrap-zipi.sh"
     zipi.vm.network "private_network", ip: "192.168.56.11"
     zipi.vm.network "forwarded_port", guest: 8080, host: 8080, host_ip: "192.168.56.11", auto_correct: true
@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "zape" do |zape|
     zape.ssh.username = "vagrant"
     zape.vm.host_name = "zape.local"
-    zape.vm.box = "base"
+    zape.vm.box = "ubuntu/xenial64"
     zape.vm.provision :shell, :path => "vagrant-bootstrap-zape.sh"
     zape.vm.network "private_network", ip: "192.168.56.12"
   end
@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "pantuflo" do |pantuflo|
     pantuflo.ssh.username = "vagrant"
     pantuflo.vm.host_name = "pantuflo.local"
-    pantuflo.vm.box = "base"
+    pantuflo.vm.box = "ubuntu/xenial64"
     pantuflo.vm.network :private_network, ip: '192.168.56.13'
     pantuflo.vm.network "forwarded_port", guest: 9000, host: 9000, host_ip: "192.168.56.13", auto_correct: true
     pantuflo.vm.provider :virtualbox do |vb|
