@@ -5,9 +5,23 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/03_Jenkins/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/03_Jenkins/Vagrantfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/07_Sonarqube/vagrant-bootstrap-pantuflo.sh" beforeDir="false" afterPath="$PROJECT_DIR$/07_Sonarqube/vagrant-bootstrap-pantuflo.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre-requisitos/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/pre-requisitos/Vagrantfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre-requisitos/create_boxes.sh" beforeDir="false" afterPath="$PROJECT_DIR$/pre-requisitos/create_boxes.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre-requisitos/import_boxes.sh" beforeDir="false" afterPath="$PROJECT_DIR$/pre-requisitos/import_boxes.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/Vagrantfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/clean_vagrant.sh" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/clean_vagrant.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/create_boxes.sh" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/create_boxes.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/default-role/defaults/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/default-role/defaults/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/default-role/files/myFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/default-role/files/myFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/default-role/handlers/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/default-role/handlers/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/default-role/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/default-role/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/default-role/templates/myTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/default-role/templates/myTemplate.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/default-role/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/default-role/vars/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/entorno_de_practicas.png" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/entorno_de_practicas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/import_boxes.sh" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/import_boxes.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/jenkins-nginx.txt" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/jenkins-nginx.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/vagrant-bootstrap-base.sh" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/vagrant-bootstrap-base.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/vagrant-bootstrap-zape.sh" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/vagrant-bootstrap-zape.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-requisitos/vagrant-bootstrap-zipi.sh" beforeDir="false" afterPath="$PROJECT_DIR$/00_Setup/vagrant-bootstrap-zipi.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,86 +31,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Vagrantfile" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/03_Jenkins/Vagrantfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vagrantfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/07_Sonarqube/Vagrantfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="49" column="5" lean-forward="true" selection-end-line="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vagrant-bootstrap-base.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/07_Sonarqube/vagrant-bootstrap-base.sh">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="vagrant-bootstrap-pantuflo.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/07_Sonarqube/vagrant-bootstrap-pantuflo.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2415">
-              <caret line="161" column="19" lean-forward="true" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vagrant-bootstrap-zape.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/07_Sonarqube/vagrant-bootstrap-zape.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-297" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vagrant-bootstrap-zipi.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/07_Sonarqube/vagrant-bootstrap-zipi.sh">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="get_jenkins_password.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03_Jenkins/get_jenkins_password.sh">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03_Jenkins/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/06_Docker/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-2013" />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vagrantfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02_Vagrant/Vagrantfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -148,16 +83,6 @@
               <item name="AITM" type="b2602c69:ProjectViewProjectNode" />
               <item name="AITM" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="AITM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AITM" type="462c0819:PsiDirectoryNode" />
-              <item name="03_Jenkins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AITM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AITM" type="462c0819:PsiDirectoryNode" />
-              <item name="07_Sonarqube" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -175,6 +100,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/03_Jenkins" />
       <recent name="$PROJECT_DIR$/pre-requisitos" />
     </key>
   </component>
@@ -245,16 +171,15 @@
       <updated>1525340782457</updated>
       <workItem from="1525340784243" duration="189000" />
       <workItem from="1525341002420" duration="321000" />
-      <workItem from="1525341412521" duration="3196000" />
+      <workItem from="1525341412521" duration="3890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3706000" />
+    <option name="totallyTimeSpent" value="4400000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -269,7 +194,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.125" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -348,41 +273,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pre-requisitos/import_boxes.sh">
+    <entry file="file://$PROJECT_DIR$/00_Setup/import_boxes.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pre-requisitos/create_boxes.sh">
+    <entry file="file://$PROJECT_DIR$/00_Setup/create_boxes.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pre-requisitos/clean_vagrant.sh">
+    <entry file="file://$PROJECT_DIR$/00_Setup/clean_vagrant.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pre-requisitos/jenkins-nginx.txt">
+    <entry file="file://$PROJECT_DIR$/00_Setup/jenkins-nginx.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pre-requisitos/vagrant-bootstrap-base.sh">
+    <entry file="file://$PROJECT_DIR$/00_Setup/vagrant-bootstrap-base.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-57" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pre-requisitos/vagrant-bootstrap-zape.sh">
+    <entry file="file://$PROJECT_DIR$/00_Setup/vagrant-bootstrap-zape.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pre-requisitos/vagrant-bootstrap-zipi.sh">
+    <entry file="file://$PROJECT_DIR$/00_Setup/vagrant-bootstrap-zipi.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pre-requisitos/vagrant-bootstrap-pantuflo.sh">
+    <entry file="file://$PROJECT_DIR$/00_Setup/vagrant-bootstrap-pantuflo.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pre-requisitos/Vagrantfile">
+    <entry file="file://$PROJECT_DIR$/00_Setup/Vagrantfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
           <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
@@ -404,6 +329,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_Jenkins/Vagrantfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_Jenkins/vagrant-bootstrap-base.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_Jenkins/vagrant-bootstrap-zape.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07_Sonarqube/Vagrantfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="49" column="5" lean-forward="true" selection-end-line="51" />
         </state>
       </provider>
     </entry>
@@ -433,20 +378,6 @@
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/07_Sonarqube/Vagrantfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="49" column="5" lean-forward="true" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03_Jenkins/Vagrantfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>

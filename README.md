@@ -11,7 +11,7 @@ Este curso incluye prácticas de iniciación a los siguientes softwares:
 
 ## Requisitos previos
 
-Para las prácticas es necesario de algunos requisitos prévios que se encuentran [aquí](pre-requisitos)
+Para las prácticas es necesario de algunos requisitos prévios que se encuentran [aquí](00_Setup)
 
 * Presentacion: [Presentacion](./slides/slides-AITM-2017.pdf)
 
@@ -19,7 +19,7 @@ Para las prácticas es necesario de algunos requisitos prévios que se encuentra
 
 Esta es la infraestructura de practicas diseñada:
 
-![Entorno de prácticas](./pre-requisitos/entorno_de_practicas.png)
+![Entorno de prácticas](00_Setup/entorno_de_practicas.png)
 
 ---
 
