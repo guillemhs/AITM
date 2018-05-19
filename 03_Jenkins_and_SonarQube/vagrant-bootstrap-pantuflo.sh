@@ -118,11 +118,6 @@ ssl_session_timeout 6h;
 #ssl_stapling_verify on;
 server {
     listen 80;
-    server_name _;
-    return 301 https://$config_fqdn\$request_uri;
-}
-server {
-    listen 443 ssl http2;
     server_name $config_fqdn;
     ssl_certificate /etc/ssl/private/$config_fqdn-crt.pem;
     ssl_certificate_key /etc/ssl/private/$config_fqdn-keypair.pem;
